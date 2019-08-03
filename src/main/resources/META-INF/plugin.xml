@@ -28,6 +28,12 @@
         <!-- Add your extensions here -->
     </extensions>
 
+    <project-components>
+        <component>
+            <implementation-class>freewind.excludedirs.MyProjectComponent</implementation-class>
+        </component>
+    </project-components>
+
     <actions>
 
         <group id="idea-plugin-hello-world-demo.SampleMenu" text="_Sample Menu" description="Sample menu of idea-plugin-hello-world-demo">
