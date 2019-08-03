@@ -3,11 +3,12 @@ package freewind.excludedirs
 import java.nio.file.FileSystems
 import java.nio.file.Paths
 
+
 data class Rule(private val pattern: String) {
     private val pathMatcher = FileSystems.getDefault().getPathMatcher("glob:$pattern")
 
-    fun matches(filePath: String): Boolean {
-        return pathMatcher.matches(Paths.get(filePath))
+    fun matches(relativeFilePath: String): Boolean {
+        return pathMatcher.matches(Paths.get(relativeFilePath))
     }
 
 //    private fun standardizePath(path: String): String {
